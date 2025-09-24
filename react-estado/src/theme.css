@@ -1,0 +1,86 @@
+/* Midnight Purple theme: modern spacing, dark palette, minimal overrides */
+
+/* CSS variables to tint Bootstrap components without breaking layout */
+:root {
+  /* Base background and text */
+  --bs-body-bg: #0f0e17;         /* near-black with a hint of purple */
+  --bs-body-color: #e6e6f0;      /* soft off-white */
+
+  /* Accent purples */
+  --purple-900: #1b102e;
+  --purple-800: #24123a;
+  --purple-700: #2e1550;
+  --purple-600: #3a1b6b;
+  --purple-500: #5b2aa9;         /* midnight purple */
+  --purple-400: #7a49c8;
+  --purple-300: #9a74e0;
+  --purple-200: #bda6f0;
+  --purple-100: #e2d9fb;
+
+  /* Bootstrap semantic colors (lightly tinted to purple theme) */
+  --bs-primary: var(--purple-500);
+  --bs-secondary: #7a7a8c;
+  --bs-success: #2ea97d;
+  --bs-danger: #d94866;
+  --bs-warning: #e8a34f;
+  --bs-info: #5db4e6;
+
+  /* Cards and surfaces */
+  --surface-1: #141228;          /* main surface */
+  --surface-2: #1a1433;          /* elevated surface */
+  --surface-border: rgba(255,255,255,0.08);
+}
+
+/* Body background/text using Bootstrap variables */
+body {
+  /* Midnight purple gradient background */
+  background:
+    radial-gradient(1200px 600px at 10% 0%, rgba(122, 73, 200, 0.18), transparent 60%),
+    radial-gradient(1000px 500px at 90% 10%, rgba(91, 42, 169, 0.16), transparent 60%),
+    linear-gradient(180deg, #0b0a16 0%, #0f0e17 35%, #141228 100%);
+  color: var(--bs-body-color);
+}
+
+/* Card: modern surface, rounded corners, subtle border */
+.card {
+  background: linear-gradient(180deg, var(--surface-2), var(--surface-1));
+  border: 1px solid var(--surface-border);
+  border-radius: 16px;
+}
+.card .card-title {
+  color: var(--purple-200);
+}
+
+/* Buttons: keep Bootstrap variants, just refine radius and weight */
+.btn {
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* Dividers and subtle separators */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent);
+  margin: 1rem 0;
+}
+
+/* Modern spacers (do not conflict with Bootstrap utilities) */
+.spacer-sm { height: 0.5rem; }
+.spacer-md { height: 1rem; }
+.spacer-lg { height: 2rem; }
+
+/* Headings spacing tweaks (keeps responsiveness) */
+.display-1, .display-2, .display-3, .display-4, .display-5, .display-6 {
+  line-height: 1.1;
+}
+
+/* Subtle glow for numbers */
+.display-1 {
+  text-shadow: 0 0 24px rgba(122, 73, 200, 0.25);
+}
+
+/* Container background for the full-page section */
+.bg-body-tertiary {
+  /* Let the global gradient show through */
+  background: transparent !important;
+}
