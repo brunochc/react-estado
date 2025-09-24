@@ -22,7 +22,7 @@ function App() {
               <h1 className="card-title display-6 fw-bold mb-3">Contador</h1>
               <div className="display-1 fw-bold my-3">{count}</div>
               <div className="d-flex gap-2 justify-content-center flex-wrap my-3">
-                <button onClick={decrementCount} className="btn btn-danger">- Decrementar</button>
+                <button onClick={decrementCount} className="btn btn-danger">- Disminuir</button>
                 <button onClick={resetCount} className="btn btn-secondary">Reset</button>
                 <button onClick={incrementCount} className="btn btn-success">+ Incrementar</button>
               </div>
